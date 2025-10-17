@@ -126,11 +126,11 @@ const Travel = () => {
 
         {/* City Selector */}
         <div className="mb-6">
-          <label className="block mb-2 font-semibold">Select Your City:</label>
+          <label className="block mb-2 font-semibold text-gray-800">Select Your City:</label>
           <select
             value={selectedCity}
             onChange={handleCityChange}
-            className="w-full p-3 rounded-md text-black"
+            className="w-full p-3 rounded-lg bg-gradient-to-r from-indigo-100 to-purple-100 text-gray-800 border border-indigo-300 focus:outline-none focus:ring-2 focus:ring-indigo-400 shadow-sm"
           >
             <option value="">--Select--</option>
             {Object.keys(cityTasks).map((city) => (
@@ -140,6 +140,7 @@ const Travel = () => {
             ))}
           </select>
         </div>
+
 
         {/* City Suggestions */}
         {selectedCity && (
@@ -155,11 +156,10 @@ const Travel = () => {
                   <button
                     onClick={() => addTask(task)}
                     disabled={addedTasks.has(task)}
-                    className={`px-3 py-1 rounded-md ${
-                      addedTasks.has(task)
+                    className={`px-3 py-1 rounded-md ${addedTasks.has(task)
                         ? "bg-gray-600 cursor-not-allowed"
                         : "bg-green-600 hover:bg-green-700"
-                    }`}
+                      }`}
                   >
                     {addedTasks.has(task) ? "Added" : "Add"}
                   </button>
