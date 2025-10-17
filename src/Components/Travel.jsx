@@ -157,8 +157,8 @@ const Travel = () => {
                     onClick={() => addTask(task)}
                     disabled={addedTasks.has(task)}
                     className={`px-3 py-1 rounded-md ${addedTasks.has(task)
-                        ? "bg-gray-600 cursor-not-allowed"
-                        : "bg-green-600 hover:bg-green-700"
+                      ? "bg-gray-600 cursor-not-allowed"
+                      : "bg-green-600 hover:bg-green-700"
                       }`}
                   >
                     {addedTasks.has(task) ? "Added" : "Add"}
@@ -203,8 +203,9 @@ const Travel = () => {
               placeholder="Enter your task..."
               value={customTask}
               onChange={(e) => setCustomTask(e.target.value)}
-              className="flex-1 p-3 rounded-md text-black"
+              className="w-full p-3 rounded-lg bg-gradient-to-r from-indigo-100 to-purple-100 text-gray-800 border border-indigo-300 focus:outline-none focus:ring-2 focus:ring-indigo-400 shadow-sm placeholder-gray-500"
             />
+
             <button
               onClick={addCustomTask}
               className="bg-green-600 hover:bg-green-700 px-4 py-2 rounded-md"
